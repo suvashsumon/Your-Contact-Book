@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu, View Menu</title>
+    <link rel="stylesheet" href="bootsrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootsrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootsrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--    header section start              -->
+    <div class="nev-back">
+        <div class="row heading">
+
+            <div class="title col-lg-11 col-md-10">
+                <h1>Your Contact Book</h1>
+            </div>
+            <div class="col-lg-1 col-md-2 user">
+                <button class="menu-button" data-toggle="modal" data-target="#myModal">Menu</button>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Menu</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Get CVF</a></li>
+                                    <li><a href="#">Get PDF</a></li>
+                                    <li><a href="#">Acc Setting</a></li>
+                                    <li><a href="#">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    header section end  
+<!--    getting contact address     -->
+    <div>
+        <form>
+            <legend>Add Contact</legend>
+            <input class="col-lg-6 form-control" type="text" placeholder="Name" required>
+            <input class="col-lg-6 form-control" type="text" placeholder="Address">
+            <input class="col-lg-6 form-control" type="text" placeholder="Email">
+            <input class="col-lg-6 form-control" type="text" placeholder="Phone" required>
+            <input class="col-lg-6 form-control" type="text" placeholder="Add any comment to idetification">
+            <button class="btn btn-success">Save Contact</button>
+        </form>
+    </div>
+
+    <!--    showing contact address     -->
+    <script src="JQuery/jquery-3.5.1.min.js"></script>
+    <script src="bootsrap/js/bootstrap.bundle.js"></script>
+    <script src="bootsrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootsrap/js/bootstrap.js"></script>
+    <script src="bootsrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

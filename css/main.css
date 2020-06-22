@@ -1,0 +1,68 @@
+.nev-back {
+    background-color: darkblue;
+}
+
+.heading {
+    width: 90%;
+    padding: 10px 0;
+    margin: auto;
+    color: white;
+}
+
+.heading .title {}
+
+.heading button {
+    font-size: 25px;
+    padding: 0 20px;
+    color: white;
+    background-color: darkblue;
+    border: 2px solid yellow;
+    border-radius: 5px;
+}
+
+.heading .user {
+    position: relative;
+}
+
+.modal-title {
+    color: blue;
+    font-weight: bold;
+    font-family: tahoma;
+}
+
+.modal-body ul {
+    padding: 0;
+}
+
+.modal-body ul li {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-body ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: tahoma;
+}
+
+.modal-body ul li a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.menu-button {
+    margin-top: 5px;
+}
+
+@media all and (max-width: 416px) {
+    .title > h1 {
+        font-size: 25px;
+    }
+
+    .heading button {
+        font-size: 20px;
+        padding: 5px;
+        border: 2px solid yellow;
+    }
+}
