@@ -35,7 +35,7 @@
                                 <ul>
                                     <li><a href="#">Get CVF</a></li>
                                     <li><a href="#">Get PDF</a></li>
-                                    <li><a href="#">Acc Setting</a></li>
+                                    <li><a href="#">Developer</a></li>
                                     <li><a href="#">Log Out</a></li>
                                 </ul>
                             </div>
@@ -50,15 +50,15 @@
 
     <!--    add contact section is started here         -->
     <div class="container">
-        <h2>Add Contact</h2>
+        <h2 style="margin-top:  10px;">Add Contact</h2>
         <hr />
         <div class="row">
-            <input class="form-control" type="text" placeholder="Name">
-            <input class="form-control" type="text" placeholder="Address">
-            <input class="form-control" type="email" placeholder="Email">
-            <input class="form-control" type="text" placeholder="Phone No">
-            <input class="form-control" type="text" placeholder="Add comments to specify separated by comma.">
-            <button class="btn btn-success" type="submit">Add to Contact</button>
+            <input id="name" class="form-control" type="text" placeholder="Name" required>
+            <input id="address" class="form-control" type="text" placeholder="Address">
+            <input id="email" class="form-control" type="email" placeholder="Email">
+            <input id="phone" class="form-control" type="text" placeholder="Phone No">
+            <input id="tags" class="form-control" type="text" placeholder="Add tags separated by comma">
+            <button onclick="showAddedContact();" class="btn btn-success" type="submit">Add to Contacts</button>
         </div>
     </div>
     <!--    add contacts end here       -->
@@ -72,34 +72,13 @@
             </form>
             <hr />
         </div>
-        <table class="table">
+        <table class="table" id="contactTable">
             <tr>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Tags</th>
-            </tr>
-            <tr>
-                <td>Suvash Kumar</td>
-                <td>Atrai, Naogaon</td>
-                <td>suvashkumar.naogaon@gmail.com</td>
-                <td>01717601509</td>
-                <td>CSE_RU, Amir_Ali_Hall</td>
-            </tr>
-            <tr>
-                <td>Suvash Kumar</td>
-                <td>Atrai, Naogaon</td>
-                <td>suvashkumar.naogaon@gmail.com</td>
-                <td>01717601509</td>
-                <td>CSE_RU, Amir_Ali_Hall</td>
-            </tr>
-            <tr>
-                <td>Suvash Kumar</td>
-                <td>Atrai, Naogaon</td>
-                <td>suvashkumar.naogaon@gmail.com</td>
-                <td>01717601509</td>
-                <td>CSE_RU, Amir_Ali_Hall</td>
             </tr>
         </table>
     </div>
@@ -120,6 +99,7 @@
     <script src="bootsrap/js/bootstrap.bundle.min.js"></script>
     <script src="bootsrap/js/bootstrap.js"></script>
     <script src="bootsrap/js/bootstrap.min.js"></script>
+    <script src="javascript/app.js"></script>
 </body>
 
 </html>
