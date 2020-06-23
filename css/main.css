@@ -1,3 +1,7 @@
+body {
+    font-family: tahoma;
+}
+
 .nev-back {
     background-color: darkblue;
 }
@@ -55,7 +59,55 @@
     margin-top: 5px;
 }
 
+/* form design started  */
+
+.container {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.row input {
+    margin: 5px 10px;
+}
+
+.row button {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/*form section end  */
+
+/*  footer is started   */
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    line-height: 1em;
+}
+
+footer a {
+    color: red;
+}
+
+footer a:hover {
+    color: lightblue;
+}
+
+/* responsive design started  */
+
 @media all and (max-width: 416px) {
+
+    /*    navigation        */
     .title > h1 {
         font-size: 25px;
     }
@@ -64,5 +116,10 @@
         font-size: 20px;
         padding: 5px;
         border: 2px solid yellow;
+    }
+
+    /*    add contact section       */
+    .row h2 {
+        font-size: 20px;
     }
 }
