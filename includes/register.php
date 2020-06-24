@@ -11,7 +11,18 @@
     if($isExist==0) {
         if ($password == $repassword) {
             mysqli_query($conn, "INSERT INTO user_info (id,Name,Email,Phone,password) VALUES (NULL,'$name','$email','$phone','$password')");
-            header("location: ../home.html");
+            $result = mysqli_query($conn, "SELECT id FROM user_info WHERE Email='$email'");
+            $row = mysqli_fetch_assoc($result);
+            $tableName = "contacts_".$row['id'];
+            $createTableQuery = "CREATE TABLE ".$tableName." (Contact_Name varchar(255),Address_info varchar(255), Email varchar(255),Phone varchar(255), Tags varchar(255))";
+            if (mysqli_query($conn, $createTableQuery)) {
+                echo "table created";
+            } else {
+                echo "table creation failed";
+            }
+            
+            //header("location: ../home.html");
+            echo $tableName;
         } else {
             header("location: ../index.html");
         }
