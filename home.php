@@ -56,19 +56,30 @@
     </div>
     <!--    header is done  -->
 
-
+    <div>
+    <?php
+        if (isset($_GET['verdict'])) {
+            if ($_GET['verdict']=='success') {
+                echo '<h4 style="background: green; text-align: center; padding: 10px; color: #fff;">Contact Added</h4>';
+            }
+            else if ($_GET['verdict']=='tryagain') {
+                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">Something going wrong. Please try again.</h4>';
+            }
+        }
+    ?>
+    </div>
     <!--    add contact section is started here         -->
     <div class="container">
         <h2 style="margin-top:  10px;">Add Contact</h2>
         <hr />
-        <div class="row">
-            <input id="name" class="form-control" type="text" placeholder="Name" required>
-            <input id="address" class="form-control" type="text" placeholder="Address">
-            <input id="email" class="form-control" type="email" placeholder="Email">
-            <input id="phone" class="form-control" type="text" placeholder="Phone No">
-            <input id="tags" class="form-control" type="text" placeholder="Add tags separated by comma">
-            <button onclick="showAddedContact();" class="btn btn-success" type="submit">Add to Contacts</button>
-        </div>
+        <form class="row"  action="includes/addContact.php" method="post">
+            <input name="name" id="name" class="form-control" type="text" placeholder="Name" required>
+            <input name="address" id="address" class="form-control" type="text" placeholder="Address">
+            <input name="email" id="email" class="form-control" type="email" placeholder="Email">
+            <input name="phone" id="phone" class="form-control" type="text" placeholder="Phone No">
+            <input name="tags" id="tags" class="form-control" type="text" placeholder="Add tags separated by comma">
+            <button class="btn btn-success" type="submit">Add to Contacts</button>
+        </form>
     </div>
     <!--    add contacts end here       -->
 
