@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (isset($_SESSION['name'])) {
+        header("location: home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -17,7 +23,21 @@
         <h1>Your Contact Book</h1>
     </header>
 <!--    header section end              -->
- 
+ <div>
+    <?php
+        if (isset($_GET['verdict'])) {
+            if ($_GET['verdict']=='noaccount') {
+                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">No Record Found. Please Register.</h4>';
+            }
+            else if ($_GET['verdict']=='passnotmatch') {
+                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">Password does not match. Please correct it.</h4>';
+            }
+            else if ($_GET['verdict']=='hasaccount') {
+                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">You already have an account. Please log in.</h4>';
+            }
+        }
+    ?>
+</div>
 <!--    end : body section          -->
     <section>
         <div class="row">
@@ -25,7 +45,7 @@
         <div class="log-in col-lg-6">
             <form action="includes/login.php" method="post">
                 <legend class="col-lg-12">Log In</legend>
-                <input name="email" class="col-lg-12 form-control" type="text" placeholder="Email" required>
+                <input name="email" class="col-lg-12 form-control" type="email" placeholder="Email" required>
                 <input  name="pass" class="col-lg-12  form-control" type="password" placeholder="Password" required>
                 <button class="col-lg-12 btn btn-success">Log In</button>
                 <p class="col-lg-12">Not registerd yet? Create Account First.</p>

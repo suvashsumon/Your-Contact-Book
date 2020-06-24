@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+
+    if (!isset($_SESSION['name'])) {
+        header("location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="">
 
@@ -27,7 +36,7 @@
                         <div class="modal-content">
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                <h4 class="modal-title">Menu</h4>
+                                <h4 class="modal-title"><?php echo $_SESSION['name']; ?></h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <!-- Modal body -->
@@ -35,8 +44,8 @@
                                 <ul>
                                     <li><a href="#">Get CVF</a></li>
                                     <li><a href="#">Get PDF</a></li>
-                                    <li><a href="#">Developer</a></li>
-                                    <li><a href="#">Log Out</a></li>
+                                    <li><a href="http://suvashkumar.xyz">Developer</a></li>
+                                    <li><a href="includes/logout.php">Log Out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -80,6 +89,20 @@
                 <th>Phone</th>
                 <th>Tags</th>
             </tr>
+            <?php
+                $conn = mysqli_connect('localhost','root','','your_contact_book');
+                $query = "SELECT * FROM ".$_SESSION['tablename'];
+                $getContacts = mysqli_query($conn,$query);
+                while($row = mysqli_fetch_assoc($getContacts)) {
+                    echo "<tr>";
+                    echo "<td>".$row['Contact_Name']."</td>";
+                    echo "<td>".$row['Address_info']."</td>";
+                    echo "<td>".$row['Email']."</td>";
+                    echo "<td>".$row['Phone']."</td>";
+                    echo "<td>".$row['Tags']."</td>";
+                    echo "</tr>";
+                }
+            ?>
         </table>
     </div>
     <!--    view contact form is done       -->
