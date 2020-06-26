@@ -44,7 +44,7 @@
                                 <ul>
                                     <li><a href="#">Get CVF</a></li>
                                     <li><a href="pdfcreator/">Get PDF</a></li>
-                                    <li><a href="http://suvashkumar.xyz">Developer</a></li>
+                                    <li><a href="setting.php">Account Setting</a></li>
                                     <li><a href="includes/logout.php">Log Out</a></li>
                                 </ul>
                             </div>
@@ -64,6 +64,9 @@
             }
             else if ($_GET['verdict']=='tryagain') {
                 echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">Something going wrong. Please try again.</h4>';
+            }
+            else if ($_GET['verdict']=='settingchanged') {
+                echo '<h4 style="background: lightblue; text-align: center; padding: 10px; color: #fff;">Account Setting Changed.</h4>';
             }
         }
     ?>
