@@ -43,7 +43,7 @@
                             <div class="modal-body">
                                 <ul>
                                     <li><a href="#">Get CVF</a></li>
-                                    <li><a href="#">Get PDF</a></li>
+                                    <li><a href="pdfcreator/">Get PDF</a></li>
                                     <li><a href="http://suvashkumar.xyz">Developer</a></li>
                                     <li><a href="includes/logout.php">Log Out</a></li>
                                 </ul>
