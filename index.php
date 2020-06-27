@@ -52,14 +52,13 @@
                 <p class="col-lg-12">Lost password? <a href="#">Click here to get password via email.</a></p>
             </form>
         </div>
-        
 <!--        this div is for sign up       -->
         <div class="sign-up  col-lg-6">
             <form action="includes/register.php" method="post">
                 <legend class="col-lg-12">Register</legend>
                 <input name="name" class="col-lg-12  form-control" type="text" placeholder="Name" required>
-                <input name="email" class="col-lg-12  form-control" type="email" placeholder="Email">
-                <input name="phone" class="col-lg-12  form-control" type="text" placeholder="Phone No" required>
+                <input name="email" class="col-lg-12  form-control" type="email" placeholder="Email" required>
+                <input name="phone" class="col-lg-12  form-control" type="text" placeholder="Phone No">
                 <input name="pass" class="col-lg-12  form-control" type="password" placeholder="Password" required>
                 <input name="repass" class="col-lg-12  form-control" type="password" placeholder="Confirm Password" required>
                 <button class="col-lg-12 btn btn-info">Register</button>
