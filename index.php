@@ -27,7 +27,7 @@
     <?php
         if (isset($_GET['verdict'])) {
             if ($_GET['verdict']=='noaccount') {
-                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">No Record Found. Please Register.</h4>';
+                echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">Password or Mail does not match.</h4>';
             }
             else if ($_GET['verdict']=='passnotmatch') {
                 echo '<h4 style="background: red; text-align: center; padding: 10px; color: #fff;">Password does not match. Please correct it.</h4>';
@@ -49,7 +49,7 @@
                 <input  name="pass" class="col-lg-12  form-control" type="password" placeholder="Password" required>
                 <button class="col-lg-12 btn btn-success">Log In</button>
                 <p class="col-lg-12">Not registerd yet? Create Account First.</p>
-                <p class="col-lg-12">Lost password? <a href="#">Click here to get password via email.</a></p>
+                <p class="col-lg-12">Lost password? <a href="recoverPassword.php">Click here to get password via email.</a></p>
             </form>
         </div>
 <!--        this div is for sign up       -->
@@ -71,7 +71,7 @@
     <footer>
         <div>
             <p>Made By : <a href="http://suvashkumar.xyz">Suvash Kumar</a></p>
-            <p>Get Source in Github</p>
+            <p><a href="#">Get Source in Github</a></p>
         </div>
     </footer>
     <script src=""></script>
