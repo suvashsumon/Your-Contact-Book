@@ -43,7 +43,7 @@
                             <div class="modal-body">
                                 <ul>
                                     <li><a href="#">Get CVF</a></li>
-                                    <li><a href="pdfcreator/">Get PDF</a></li>
+                                    <li><a href="pdfcreator/getPdf.php">Get PDF</a></li>
                                     <li><a href="setting.php">Account Setting</a></li>
                                     <li><a href="includes/logout.php">Log Out</a></li>
                                 </ul>
