@@ -26,10 +26,11 @@
 <!--        this div is for form       -->
         <div class="sign-up  col-lg-6">
             <form action="includes/sentPassword.php" method="post">
-                <input name="email" class="col-lg-12  form-control" type="email" placeholder="Enter your email address" required>
+                <input name="email" class="col-lg-12  form-control" type="email" placeholder="Enter your email address" required disabled>
                 <button type="submit" class="col-lg-12 btn btn-info">Send me password</button>
             </form>
             <p>N:B: We will sent you password only if given mail address found in our database.</p>
+            <p style="color: red;">***Currently my mail server doesn't working. Please send a mail to <a href="mailto:suvashkumar.naogaon@gmail.com">suvashkumar.naogaon@gmail.com</a>. I will send your password within 10 hours.</p>
         </div>
             </div>
     </section>
