@@ -7,7 +7,7 @@
     
     $password = $_POST['pass'];
     $repassword = $_POST['repass'];
-    $conn = mysqli_connect('localhost','root','','your_contact_book');
+    require("../connection/conn.php");
     
     if ($password != NULL) {
         if ($password == $repassword) {

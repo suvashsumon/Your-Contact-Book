@@ -3,7 +3,7 @@
     if (!isset($_SESSION['name'])) {
         header("location: ../index.php");
     } else {
-        $conn = mysqli_connect('localhost','root','','your_contact_book');
+        require("../connection/conn.php");
         $name = $_POST['name'];
         $address = $_POST['address'];
         $email = $_POST['email'];

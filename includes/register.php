@@ -8,7 +8,7 @@
     $phone = $_POST['phone'];
     $password = md5($_POST['pass']);
     $repassword = md5($_POST['repass']);
-    $conn = mysqli_connect('localhost','root','','your_contact_book');
+    require("../connection/conn.php");
     $checkExistance = mysqli_query($conn,"SELECT * FROM user_info WHERE Email='$email'");
     $isExist = mysqli_num_rows($checkExistance);
     if($isExist==0) {

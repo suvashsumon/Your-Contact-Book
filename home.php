@@ -104,7 +104,7 @@
                 <th>Tags</th>
             </tr>
             <?php
-                $conn = mysqli_connect('localhost','root','','your_contact_book');
+                require("connection/conn.php");
                 $query = "SELECT * FROM ".$_SESSION['tablename'];
                 $getContacts = mysqli_query($conn,$query);
                 while($row = mysqli_fetch_assoc($getContacts)) {

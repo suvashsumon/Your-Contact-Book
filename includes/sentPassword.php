@@ -1,7 +1,7 @@
 <?php
 
     $email = $_POST['email'];
-    $conn = mysqli_connect('localhost','root','','your_contact_book');
+    require("../connection/conn.php");
     $result = mysqli_query($conn, "SELECT * FROM user_info WHERE Email='$email'");
 
     if (mysqli_num_rows($result)==1) {

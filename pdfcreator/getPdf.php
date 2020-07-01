@@ -1,7 +1,7 @@
 <?php
 session_start();
 //database connection and query
-$conn = mysqli_connect('localhost','root','','your_contact_book');
+require("../connection/conn.php");
 $username = "User # ".$_SESSION['name'];
 $email = "Email # ".$_SESSION['email'];
 $tablename = $_SESSION['tablename'];
